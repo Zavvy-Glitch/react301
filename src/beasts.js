@@ -4,20 +4,23 @@ class Beasts extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      slayBeast: 0
+      favorites: 0
 
     };
   }
-slayingBeast = () => {
-  this.setState({slayBeast: this.state.slayBeast + 1 });
+favoritedBeast = () => {
+  this.setState({favorites: this.state.favorites + 1 });
 }
   render() {
     return (<>
-      <img src={this.props.beast.image_url} onClick={this.slayingBeast} alt={this.props.beast.title}/>
+      <img src={this.props.beast.image_url} onClick={this.favoritedBeast} alt={this.props.beast.title}/>
       <h1>{this.props.beast.description}</h1>
       <h2>{this.props.beast.keyword}</h2>
       <h3>{this.props.beast.horns}</h3>
-      <span>Times Beast Slayed: {this.state.slayBeast}</span>
+      <span>
+        Times favorited: {this.state.favorites}
+        
+      </span>
       </>
     );
   }
