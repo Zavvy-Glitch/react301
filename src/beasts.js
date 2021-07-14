@@ -1,5 +1,7 @@
 import React from "react";
-// import Heart from 'img/Red-Heart.png'; // with require
+import 'bootstrap/dist/css/bootstrap.min.css';
+import heart from './Red-Heart.png';
+
 
 class Beasts extends React.Component {
   constructor(props) {
@@ -10,19 +12,21 @@ class Beasts extends React.Component {
     };
   }
 favoritedBeast = () => {
-  this.setState({favorites: this.state.favorites + 1 });
+  this.setState({
+    favorites: this.state.favorites + 1 
+  });
 }
   render() {
     return (<>
       <h1>{this.props.beast.title}</h1>
-      <img src={this.props.beast.image_url} onClick={this.favoritedBeast} alt={this.props.beast.title}/>
+      <img src={this.props.beast.image_url} onClick={this.favoritedBeast} alt={this.props.beast.title} width='25%' height='auto'/>
       <h2>{this.props.beast.description}</h2>
       <h3>{this.props.beast.keyword}</h3>
       <h4>{this.props.beast.horns}</h4>
       <span>
-        {/* <img src={Heart} alt={'heart'} /> */}
         Times favorited: {this.state.favorites}
       </span>
+      <img src={heart} alt={'heart'} width='1%'height='auto' />
       </>
     );
   }
