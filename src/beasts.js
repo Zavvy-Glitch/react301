@@ -1,5 +1,5 @@
 import React from "react";
-import Heart from 'img/Red-Heart.png'; // with require
+// import Heart from 'img/Red-Heart.png'; // with require
 
 class Beasts extends React.Component {
   constructor(props) {
@@ -20,7 +20,7 @@ favoritedBeast = () => {
       <h3>{this.props.beast.keyword}</h3>
       <h4>{this.props.beast.horns}</h4>
       <span>
-        <img src={Heart} alt={'heart'} />
+        {/* <img src={Heart} alt={'heart'} /> */}
         Times favorited: {this.state.favorites}
       </span>
       </>
