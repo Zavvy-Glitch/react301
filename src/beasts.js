@@ -1,4 +1,5 @@
 import React from "react";
+import Heart from 'img/Red-Heart.png'; // with require
 
 class Beasts extends React.Component {
   constructor(props) {
@@ -13,13 +14,14 @@ favoritedBeast = () => {
 }
   render() {
     return (<>
+      <h1>{this.props.beast.title}</h1>
       <img src={this.props.beast.image_url} onClick={this.favoritedBeast} alt={this.props.beast.title}/>
-      <h1>{this.props.beast.description}</h1>
-      <h2>{this.props.beast.keyword}</h2>
-      <h3>{this.props.beast.horns}</h3>
+      <h2>{this.props.beast.description}</h2>
+      <h3>{this.props.beast.keyword}</h3>
+      <h4>{this.props.beast.horns}</h4>
       <span>
+        <img src={Heart} alt={'heart'} />
         Times favorited: {this.state.favorites}
-        
       </span>
       </>
     );
