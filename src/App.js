@@ -4,7 +4,7 @@ import Main from "./main";
 import Footer from "./footer";
 
 
-class App extends React.Component;{
+class App extends React.Component{
   render() {
     return (
       <div className = "app">
