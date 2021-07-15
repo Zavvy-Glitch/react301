@@ -1,7 +1,7 @@
 import React from 'react';
 import Beasts from './beasts';
 import data from './data.json';
-import {Container, Row, Col} from 'react-bootstrap';
+// import {Container, Row, Col} from 'react-bootstrap';
 // import Carousel from 'react-bootstrap/Carousel';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
