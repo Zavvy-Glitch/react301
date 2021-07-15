@@ -23,11 +23,11 @@ updateHearts = () => {
 }
   render() {
     return (<>
-      <h1>{this.props.beast.title}</h1>
+      <h1 id='name'>{this.props.beast.title}</h1>
       <img id='photos' src={this.props.beast.image_url} onClick={this.favoritedBeast} alt={this.props.beast.title} width='25%' height='auto'/>
-      <h2>{this.props.beast.description}</h2>
-      <h3>{this.props.beast.keyword}</h3>
-      <h4>{this.props.beast.horns}</h4>
+      <h2 id='description'>{this.props.beast.description}</h2>
+      <h3 id='keyword'>{this.props.beast.keyword}</h3>
+      <h4 id='horns'>{this.props.beast.horns}</h4>
       <span id='heart'>
         Times favorited: {this.state.favorites}
       <img src={heart} alt={'heart'} width='1%'height='auto' onClick={this.updateHearts} />
