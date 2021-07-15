@@ -1,6 +1,6 @@
 import React from 'react';
 import Beasts from './beasts';
-import data from './data.json';
+// import data from './data.json';
 // import {Container, Row, Col} from 'react-bootstrap';
 // import Carousel from 'react-bootstrap/Carousel';
 import Modal from 'react-bootstrap/Modal';
@@ -15,7 +15,7 @@ class Main extends React.Component {
     this.state = {
       test: false,
       image:'',
-      data: data,
+     
       
     };
   }
@@ -36,7 +36,7 @@ render() {
     return <>
     {/* <Carousel fade> */}
     <Card className="bg-dark text-white" style={{ width: '119rem' }}>
-    {this.state.data.map(currentBeast => {
+    {this.props.data.map(currentBeast => {
       return (
         <Card.Body>
        {/* <Carousel.Item> */}
