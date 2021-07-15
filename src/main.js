@@ -4,6 +4,7 @@ import data from './data.json';
 // import {Container, Row, Col} from 'react-bootstrap';
 import Carousel from 'react-bootstrap/Carousel';
 import Modal from 'react-bootstrap/Modal';
+import Button from 'react-bootstrap/Button';
 
 
 class Main extends React.Component {
@@ -11,7 +12,6 @@ class Main extends React.Component {
     super(props);
     this.state = {
       test: false,
-      testClose:true,
       image:'',
       data: data
     };
@@ -19,10 +19,15 @@ class Main extends React.Component {
 
 handleImageClick = (beastClick) => {
   this.setState({
-    testShow: true,
-    testClose: false,
+    test: true,
     image: beastClick
   });
+}
+
+handleImageClose = () => {
+  this.setState({
+    test:false
+  })
 }
 render() {
     return <>
@@ -36,8 +41,9 @@ render() {
         
       })}
     </Carousel>
-    <Modal show = {this.state.testShow}>
+    <Modal show = {this.state.test} onHide = {this.handleImageClose}>
        <Modal.Header>
+         <Button onClick = {this.handleImageClose}>X</Button>
        </Modal.Header>
        <Modal.Body>
           <img src={this.state.image} alt=''></img>
