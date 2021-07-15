@@ -1,12 +1,39 @@
 
 #title{
-
+  
   background-color: #B2C1E1;
   color:#526EA8;
 }
+
+.carousel-control-next-icon:after{
+  content: 'Next';
+  font-size: 55px;
+  color: #1560C2;
+}
+
+.carousel-control-prev-icon:after {
+  content: 'Previous';
+  font-size: 55px;
+  color: #1560C2;
+}
+
+
 .beastTitle{
-  display:inline;
-  margin-left:45%;
+  display:flex;
+  justify-content: center;
+}
+
+#name{
+  display:flex;
+  justify-content: center;
+
+}
+
+#photos{
+  margin-left:37%;
+  border-color:#0D3A75;
+  border-style: solid;
+  
 }
 
 #foot{
@@ -15,14 +42,29 @@
 }
 
 .author{
-  display:inline;
-  margin-left:45%;
+  display:flex;
+  justify-content: center;
 }
 
-#photos{
-  margin-left:40%;
+#description{
+  display:flex;
+  justify-content: center;
 }
 
+#keyword{
+  display:flex;
+  justify-content: center;
+}
+
+#horns{
+  display:flex;
+  justify-content: center;
+}
 #heart{
-  margin-left:40%;
+  display:flex;
+  justify-content: center;
+}
+
+html{
+  background-color: #1560C2;
 }

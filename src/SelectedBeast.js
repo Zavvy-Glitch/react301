@@ -5,7 +5,6 @@ import Beasts from './beasts';
 class SelectedBeast extends React.Component {
  
   render() {
-    console.log(this.props.show)
     return (
       <div>
         {this.props.allBeasts.map((beast, idx) => (
