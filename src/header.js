@@ -1,10 +1,11 @@
 import React from 'react';
+import './index.css';
 
 class Header extends React.Component{
   render() {
     return (
-      <div>
-        <h1>Horned Beasts</h1>
+      <div id='title'>
+        <h1 className = 'beastTitle'>Horned Beasts</h1>
       </div>
     );
   }

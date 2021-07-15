@@ -1,10 +1,11 @@
 import React from 'react';
+import './index.css';
 
 class Footer extends React.Component{
   render() {
     return (
-      <div>
-        <h1>Author: Tray Chea</h1>
+      <div id='foot'>
+        <h1 className='author'>Author: Tray Chea</h1>
       </div>
     );
   }
