@@ -20,13 +20,10 @@ class App extends React.Component{
         changeHorns: parseInt(val),
       })
       
-    resetChangeHorns = () =>
-      this.setState({
-        data: data
-      })
+
 
     filter = () => {
-    const filteringHorns = this.state.data.filter ( (beast) => beast.horns === this.state.changeHorns)
+    const filteringHorns = data.filter ( (beast) => beast.horns === this.state.changeHorns)
     console.log(filteringHorns)
     this.setState({data: filteringHorns})
     }
@@ -35,7 +32,7 @@ class App extends React.Component{
     return (
       <div className = "app">
         <Header />
-        <Forms rChangeHorns={this.resetChangeHorns} changeHorns={this.setChangeHorns} filter={this.filter} />
+        <Forms changeHorns={this.setChangeHorns} filter={this.filter} />
         <Main data={this.state.data} />
         <Footer />
       </div>

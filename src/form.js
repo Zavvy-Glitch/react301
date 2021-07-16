@@ -1,6 +1,7 @@
 import React from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+import './index.css';
 
 class Forms extends React.Component {
   constructor(props) {
@@ -13,7 +14,7 @@ class Forms extends React.Component {
   changingHorns = (e) => {
     e.preventDefault();
     this.props.changeHorns(e.target.value)
-    this.props.rChangeHorns()
+    
   }
   
   onSubmit = (e) => {
@@ -24,14 +25,14 @@ class Forms extends React.Component {
   render() {
     return (
       <>
-    <Form aria-label="Default select example">
-    <select onChange={this.changingHorns}  >
+    <Form id='beastSelect'>
+    <Form.Control as='select' onChange={this.changingHorns} style={{width:'250px'}} >
       <option>Select A Number of Horns</option>
       <option value="1">One</option>
       <option value="2">Two</option>
       <option value="3">Three</option>
       <option value="100">One Hundred</option>
-    </select>
+    </Form.Control>
       <Button id="button" onClick={this.onSubmit}>SUBMIT</Button>
     </Form>
     </>
