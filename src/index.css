@@ -5,7 +5,7 @@
   color:#526EA8;
 }
 
-.carousel-control-next-icon:after{
+/* .carousel-control-next-icon:after{
   content: 'Next';
   font-size: 55px;
   color: #1560C2;
@@ -15,7 +15,7 @@
   content: 'Previous';
   font-size: 55px;
   color: #1560C2;
-}
+} */
 
 
 .beastTitle{
@@ -35,6 +35,19 @@
   border-style: solid;
   
 }
+
+#cardsArray{
+  display:flex;
+  justify-content:center;
+
+}
+
+#button{
+  display:flex;
+  justify-content:center;
+}
+
+
 
 #foot{
   background-color:#B2C1E1;
@@ -66,5 +79,9 @@
 }
 
 html{
+  color:#526EA8;
+}
+.app{
   background-color: #1560C2;
+  
 }
