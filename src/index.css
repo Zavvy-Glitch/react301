@@ -5,6 +5,12 @@
   color:#526EA8;
 }
 
+#beastSelect{
+  display:flex;
+  justify-content: center;
+  padding:20px;
+  
+}
 /* .carousel-control-next-icon:after{
   content: 'Next';
   font-size: 55px;
